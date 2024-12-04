@@ -1,0 +1,102 @@
+{
+    "aquecimento": "5 minutos de esteira ou bicicleta ergométrica em ritmo leve",
+    "resfriamento": "5 minutos de alongamento estático para os principais grupos musculares",
+    "frequencia_treino": 3,
+    "divisao": {
+        "treino_A": {
+            "grupo": "Peito e Tríceps",
+            "exercicios": [
+                {
+                    "nome": "Supino Reto",
+                    "series": 3,
+                    "repeticoes": "8-12"
+                },
+                {
+                    "nome": "Supino Inclinado",
+                    "series": 3,
+                    "repeticoes": "8-12"
+                },
+                {
+                    "nome": "Extensão de Tríceps na Polia",
+                    "series": 3,
+                    "repeticoes": "10-15"
+                },
+                {
+                    "nome": "Tríceps Francês",
+                    "series": 3,
+                    "repeticoes": "10-15"
+                }
+            ]
+        },
+        "treino_B": {
+            "grupo": "Costas e Bíceps",
+            "exercicios": [
+                {
+                    "nome": "Remada Curvada",
+                    "series": 3,
+                    "repeticoes": "8-12"
+                },
+                {
+                    "nome": "Puxada na Polia Alta",
+                    "series": 3,
+                    "repeticoes": "8-12"
+                },
+                {
+                    "nome": "Rosca Direta",
+                    "series": 3,
+                    "repeticoes": "10-15"
+                },
+                {
+                    "nome": "Rosca Martelo",
+                    "series": 3,
+                    "repeticoes": "10-15"
+                }
+            ]
+        },
+        "treino_C": {
+            "grupo": "Pernas (Quadríceps e Isquiotibiais)",
+            "exercicios": [
+                {
+                    "nome": "Agachamento Livre",
+                    "series": 3,
+                    "repeticoes": "8-12"
+                },
+                {
+                    "nome": "Leg Press",
+                    "series": 3,
+                    "repeticoes": "8-12"
+                },
+                {
+                    "nome": "Flexora de Perna",
+                    "series": 3,
+                    "repeticoes": "10-15"
+                },
+                {
+                    "nome": "Extensora de Perna",
+                    "series": 3,
+                    "repeticoes": "10-15"
+                }
+            ]
+        },
+        "treino_D": {
+            "grupo": "Ombros e Panturrilhas",
+            "exercicios": [
+                {
+                    "nome": "Desenvolvimento com Halteres",
+                    "series": 3,
+                    "repeticoes": "8-12"
+                },
+                {
+                    "nome": "Elevação Lateral",
+                    "series": 3,
+                    "repeticoes": "10-15"
+                },
+                {
+                    "nome": "Elevação de Panturrilha",
+                    "series": 3,
+                    "repeticoes": "15-20"
+                }
+            ]
+        }
+    }
+}

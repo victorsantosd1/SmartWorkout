@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleINDEX.css') }}">
+    <title>Personal Trainer IA</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <form id="treinoForm" method="post" action="/">
+        <!-- Logo Interativa -->
+        <div class="logo-container">
+            <a href="inicial.html">
+                <img src="../static/img/logo.png" alt="Logo do Site" title="Voltar para a Página Inicial">
+            </a>
+        </div>
+
+        <!-- Formulário -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" name="idade" min="10" max="100" required>
+
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" name="altura" step="0.01" min="1.0" max="2.5" placeholder="ex: 1.75" required>
+
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" name="peso" step="0.1" min="30" max="200" placeholder="ex: 70.5" required>
+
+        <label for="objetivo">Objetivo:</label>
+        <select id="objetivo" name="objetivo" required>
+            <option value="1">Hipertrofia</option>
+            <option value="2">Definição muscular</option>
+            <option value="3">Saúde e bem-estar</option>
+        </select>
+
+        <label for="experiencia">Experiência:</label>
+        <select id="experiencia" name="experiencia" required>
+            <option value="1">Nunca treinei antes</option>
+            <option value="2">1 a 3 meses</option>
+            <option value="3">6 meses a 1 ano</option>
+            <option value="4">Estou voltando a treinar</option>
+        </select>
+
+        <label for="tipo_corporal">Tipo Corporal:</label>
+        <select id="tipo_corporal" name="tipo_corporal">
+            <option value="1">Ectomorfo</option>
+            <option value="2">Mesomorfo</option>
+            <option value="3">Endomorfo</option>
+        </select>
+
+        <label for="tempo_objetivo">Tempo para Atingir o Objetivo:</label>
+        <input type="text" id="tempo_objetivo" name="tempo_objetivo" placeholder="ex: 3 meses, 1 ano">
+
+        <button type="submit">Gerar Plano de Treino</button>
+    </form>
+
+</body>
+</html>

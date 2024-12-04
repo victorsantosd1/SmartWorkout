@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styleINICIAL.css') }}">
+  <title>Gerador de Treinos</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gerador de Treinos</h1>
+    <div class="login-signup">
+      <!-- <a href="#" onclick="openModal('loginModal')">Login</a>
+      <a href="#" onclick="openModal('signupModal')">Cadastro</a> -->
+        
+      {% if not session['is_logged_in'] %}
+        <!-- Exibe Login e Cadastro se o usuário não estiver logado -->
+        <a href="#" onclick="openModal('loginModal')">Login</a>
+        <a href="#" onclick="openModal('signupModal')">Cadastro</a>
+      {% else %}
+        <!-- Exibe Treino e Logout se o usuário estiver logado -->
+        <a href="{{ url_for('logout') }}">Logout</a>
+        <a href="{{ url_for('treinos') }}">Treino</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+      <h2>Otimize seus treinos com facilidade</h2>
+      <p>Crie treinos personalizados e acompanhe sua evolução com nosso gerador de treinos inteligente. Ideal para todas as metas e níveis de experiência.</p>
+      <!-- <button onclick="window.location.href='/index';">Gerar Treino Agora</button> -->
+      <!-- Botão de gerar treino -->
+      {% if session['is_logged_in'] %}
+        <button onclick="window.location.href='/index'">Gerar Treino Agora</button>
+      {% else %}
+        <button disabled>Você precisa estar logado para gerar um treino</button>
+      {% endif %}
+    </div>
+  </main>
+  <div class="img2">
+      <img src="../static/img/2.jpg">
+  </div>
+  <div class="img4">
+    <img src="../static/img/4.jpg">
+  </div>
+  <div class="img10">
+    <img src="../static/img/10.jpg">
+  </div>
+
+  <!-- Modal de Login -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <button class="close" onclick="closeModal('loginModal')">&times;</button>
+      <h3>Login</h3>
+
+      <form action="/login" method="post">
+        <input type="email" placeholder="Email" name="email" required>
+        <input type="password" placeholder="Senha" name="senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Modal de Cadastro -->
+  <div class="modal" id="signupModal">
+    <div class="modal-content">
+      <button class="close" onclick="closeModal('signupModal')">&times;</button>
+      <h3>Cadastro</h3>
+
+      <form action="/cadastro" method="post">
+        <input type="text" placeholder="Nome"  name="nome" required>
+        <input type="email" placeholder="Email"  name="email" required>
+        <input type="password" placeholder="Senha" name="senha" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Gerador de Treinos. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = "flex";
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleTREINO.css') }}">
+    <title>Plano de Treino</title>
+</head>
+<body>
+    <h1>Plano de Treino para {{ nome }}</h1>
+
+    <h2>Divisão de Treinos</h2>
+    <div id="divisao-treinos">
+        <div>
+            {% for treino in treinos %}
+
+                <h3>{{ treino.grupo }}</h3>
+                <ul>
+                    {% for exercicio in treino.exercicios %}
+                        <li>{{ exercicio.nome }} - {{ exercicio.series }} séries de {{ exercicio.repeticoes }} repetições</li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <a href="http://127.0.0.1:5000" aria-label="Voltar à página inicial">Voltar</a>
+</body>
+</html>
